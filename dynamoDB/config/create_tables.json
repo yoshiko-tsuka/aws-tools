@@ -1,0 +1,105 @@
+{
+    "tables": [
+        {
+            "TableName": "Table1",
+            "AttributeDefinitions": [{
+                "AttributeName": "column1",
+                "AttributeType": "S"
+            }],
+            "KeySchema": [{
+                "AttributeName": "column1",
+                "KeyType": "HASH"
+            }],
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 15,
+                "WriteCapacityUnits": 15
+            }
+        },
+        {
+            "TableName": "Table2",
+            "AttributeDefinitions": [{
+                "AttributeName": "column1",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "column2",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "column3",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "column4",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "column5",
+                "AttributeType": "S"
+            }
+            ],
+            "KeySchema": [{
+                "AttributeName": "column1",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "column2",
+                "KeyType": "RANGE"
+            }
+            ],
+            "LocalSecondaryIndexes": [{
+                    "IndexName": "column1-column3-index",
+                    "KeySchema": [{
+                        "AttributeName": "column1",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "column3",
+                        "KeyType": "RANGE"
+                    }
+                    ],
+                    "Projection": {
+                    "ProjectionType": "INCLUDE",
+                    "NonKeyAttributes": ["date"]
+                    }
+                },
+                {
+                    "IndexName": "column1-column4-index",
+                    "KeySchema": [{
+                        "AttributeName": "column1",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "column4",
+                        "KeyType": "RANGE"
+                    }
+                    ],
+                    "Projection": {
+                    "ProjectionType": "INCLUDE",
+                    "NonKeyAttributes": ["date"]
+                    }
+                },
+                {
+                    "IndexName": "column1-column5-index",
+                    "KeySchema": [{
+                        "AttributeName": "column1",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "column5",
+                        "KeyType": "RANGE"
+                    }
+                    ],
+                    "Projection": {
+                    "ProjectionType": "INCLUDE",
+                    "NonKeyAttributes": ["date"]
+                    }
+                }
+            ],
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 15,
+                "WriteCapacityUnits": 15
+            }
+        }
+    ]
+}
