@@ -21,16 +21,19 @@
                 {
                     "column1": {"S": "Data1"},
                     "column2": {"S": "Data2"},
+                    "column3": {"S": "AA"},
                     "column7": {"L": [ {"S": "Cookies"} , {"S": "Coffee"}, {"N": "3.14159"}]}
                 },
                 {
                     "column1": {"S": "Data3"},
                     "column2": {"S": "Data4"},
+                    "column3": {"S": "BB"},
                     "column7": {"L": [ {"S": "Cookies"} , {"S": "Coffee"}, {"N": "3.14159"}]}
                 },
                 {
                     "column1": {"S": "Data5"},
                     "column2": {"S": "Data6"},
+                    "column3": {"S": "DD"},
                     "column7": {"L": [ {"S": "Cookies"} , {"S": "Coffee"}, {"N": "3.14159"}]}
                 }
             ]
