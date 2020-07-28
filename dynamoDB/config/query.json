@@ -7,5 +7,5 @@
         ":column2":{"S":"Data4"}
     },
     "Filter": "column3 = :column3",
-    "Projection": "column7"
+    "Projection": "column3, column7"
 }
