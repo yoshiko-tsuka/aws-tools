@@ -1,0 +1,11 @@
+{
+    "TableName": "Table2",
+    "Query": "column1 = :column1 and column2 = :column2",
+    "Attribute": {
+        ":column1":{"S":"Data3"},
+        ":column3":{"S":"BB"},
+        ":column2":{"S":"Data4"}
+    },
+    "Filter": "column3 = :column3",
+    "Projection": "column7"
+}
