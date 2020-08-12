@@ -25,7 +25,8 @@ if __name__ == "__main__":
         FilterExpression=json_data['Filter'],
         ProjectionExpression=json_data['Projection']
         )
-    result.extend(response['Items'])
+    result.extend(response)
+    print(response)
     if "LastEvaluatedKey" in response:
         nextKey = response["LastEvaluatedKey"]
         while nextKey:
