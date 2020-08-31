@@ -28,13 +28,6 @@ def _sendMail(RECIPIENT, SUBJECT, BODY_HTML=None, BODY_TEXT=None, ATTACHMENT=Non
         textpart = MIMEText(BODY_TEXT.encode(CHARSET), 'plain', CHARSET)
         msg_body.attach(textpart)
 
-    '''
-    TODO: 本処理は使われていないためコメントアウトしている.（テストも未実施の状態）
-    # Attach files.
-    if ATTACHMENT is not None:
-        msg = _addAttachment(msg, ATTACHMENT)
-    '''
-
     # Attach the multipart/alternative child container to the multipart/mixed
     # parent container.
     msg.attach(msg_body)
